@@ -1,0 +1,44 @@
+{
+  "active": true,
+  "domains": [
+    "tf-widgets.com",
+    "*.tf-widgets.com"
+  ],
+  "widget": "form",
+  "mode": "inline",
+  "title": "Get in touch",
+  "subtitle": "Send us a message and we'll get back to you soon.",
+  "submitText": "Send message",
+  "successTitle": "Thank you!",
+  "successText": "Your message has been sent. We'll reply as soon as we can.",
+  "fields": {
+    "name": {
+      "on": true,
+      "required": true,
+      "label": "Name"
+    },
+    "email": {
+      "on": true,
+      "required": true,
+      "label": "Email"
+    },
+    "phone": {
+      "on": false,
+      "required": false,
+      "label": "Phone"
+    },
+    "message": {
+      "on": true,
+      "required": true,
+      "label": "Message"
+    }
+  },
+  "style": {
+    "colors": {
+      "background": "#ffffff",
+      "text": "#111111",
+      "accent": "#25d366",
+      "accentText": "#052e16"
+    }
+  }
+}
