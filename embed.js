@@ -8,7 +8,7 @@
  */
 (function () {
     'use strict';
-    var VERSION = '1.0.0';
+    var VERSION = '1.0.1';
     var LOG = '[TFW Form]';
     var API = 'https://forms.tf-widgets.com';         // куда отправляются заявки (воркер tfw-orders)
     var PREVIEW_DOMAINS = ['tf-widgets.com', '*.tf-widgets.com', '9ac5za-h1.myshopify.com'];
@@ -278,6 +278,7 @@
             var d = def.fields[k], r = isObj(raw.fields) && isObj(raw.fields[k]) ? raw.fields[k] : {};
             var x = mergeDeep(d, r);
             x.on = !!x.on; x.required = x.on && !!x.required;
+            if (k === 'message') x.required = false;            // пустое сообщение можно: сервер подставит стандартный текст
             x.label = String(x.label || d.label).slice(0, 60);
             x.placeholder = String(x.placeholder == null ? '' : x.placeholder).slice(0, 80);
             if (k === 'extra1' || k === 'extra2') {
